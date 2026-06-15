@@ -46,7 +46,7 @@
 
 ```bash
 #Запуск приложения
-python -m src.db
+python -m PIOA-M6O-122BV.src.db
 
 #Запуск всех тестов
 python -m pytest tests/

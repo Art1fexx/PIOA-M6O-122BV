@@ -2,30 +2,14 @@
 
 ## Германов Дмитрий/М6О-122БВ-25
 
-Консольное приложение на Python для CRUD-операций над таблицей автомобилей с хранением данных в оперативной памяти. Реализовано с использованием объектно-ориентированного подхода и покрыто тестами.
+Консольное приложение на Python для CRUD-операций над таблицей автомобилей с хранением данных в оперативной памяти. Реализовано с использованием объектно-ориентированного подхода и покрыто тестами. Результат покрытия тестами - 88%
+
+<img width="1365" height="382" alt="image" src="https://github.com/user-attachments/assets/cd9de2e0-0f8c-40b4-9189-fb1fdd12fe97" />
+
 
 ## Структура проекта
 
-PIOA-M6O-122BV/
-│
-├── src/
-│ └── db/
-│ ├── init.py
-│ ├── main.py
-│ ├── tui.py
-│ └── backend/
-│ ├── init.py
-│ ├── memory.py
-│ └── errors.py
-│
-├── tests/
-│ ├── init.py
-│ ├── test_memory.py
-│ ├── test_tui.py
-│ └── test_main.py
-│
-└── README.md
-
+<img width="447" height="483" alt="image" src="https://github.com/user-attachments/assets/546fa8ec-da3d-43e4-ac48-d1be471f79bd" />
 
 
 ## Реализованная функциональность
@@ -61,12 +45,13 @@ PIOA-M6O-122BV/
 Из корневой директории проекта:
 
 ```bash
+#Запуск приложения
 python -m src.db
 
 #Запуск всех тестов
 python -m pytest tests/
 
-# Установка pytest-cov (если не установлен)
+# Установка pytest-cov
 pip install pytest-cov
 
 # Запуск с измерением покрытия

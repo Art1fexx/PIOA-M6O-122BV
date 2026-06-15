@@ -8,7 +8,6 @@ class InMemoryDB:
         self.next_id: int = 1
 
     def add_record(self, data: Dict[str, Any]) -> int:
-        """Добавление записи с проверками."""
         if not isinstance(data, dict):
             raise TypeError("Данные должны быть словарем")
         
@@ -35,18 +34,15 @@ class InMemoryDB:
         return record_id
 
     def get_all_records(self) -> List[Tuple[int, Dict[str, Any]]]:
-        """Возвращает все записи."""
         return list(self.records.items())
 
     def get_record(self, record_id: int) -> Dict[str, Any]:
-        """Возвращает запись по ID."""
         if record_id not in self.records:
             raise KeyError(f"Запись с ID {record_id} не найдена")
 
         return self.records[record_id]
 
     def filter_records(self, filters: Dict[str, Any]) -> List[Tuple[int, Dict[str, Any]]]:
-        """Фильтрация записей по словарю фильтров."""
         if not isinstance(filters, dict):
             raise TypeError("Фильтры должны быть словарем")
 
@@ -66,7 +62,6 @@ class InMemoryDB:
         return result
 
     def update_record(self, record_id: int, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Обновление записи с проверками."""
         if record_id not in self.records:
             raise KeyError(f"Запись с ID {record_id} не найдена")
         
@@ -87,7 +82,6 @@ class InMemoryDB:
         return self.records[record_id]
 
     def delete_record(self, record_id: int) -> Dict[str, Any]:
-        """Удаление записи."""
         if record_id not in self.records:
             raise KeyError(f"Запись с ID {record_id} не найдена")
 
